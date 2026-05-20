@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alta académica — Campus virtual</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700&family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="site-identity">
+          <div class="site-icon" aria-hidden="true"></div>
+          <div class="site-text">
+            <span class="site-name">Campus virtual</span>
+            <span class="site-tagline">Aula en línea · registro de alumno</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="card">
+        <div class="card-header">
+          <p class="eyebrow">Control de asistencia</p>
+          <h1>Alta en la plataforma</h1>
+          <p class="subtitle">
+            Rellena el formulario con tus datos personales para crear tu perfil de alumno y acceder a las
+            materias, el calendario del curso y los avisos del aula.
+          </p>
+        </div>
+
+        <form class="form" method="get" action="">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              autocomplete="given-name"
+              required
+              minlength="2"
+              placeholder="Ej. Ana"
+            />
+          </div>
+
+          <div class="field">
+            <label for="apellidos">Apellidos</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              autocomplete="family-name"
+              required
+              minlength="2"
+              placeholder="Ej. García López"
+            />
+          </div>
+
+          <div class="field field-narrow">
+            <label for="edad">Edad</label>
+            <input
+              type="number"
+              id="edad"
+              name="edad"
+              min="1"
+              max="120"
+              required
+              inputmode="numeric"
+              placeholder="Ej. 22"
+            />
+          </div>
+
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              autocomplete="email"
+              required
+              placeholder="nombre@ejemplo.com"
+            />
+          </div>
+
+          <div class="field">
+            <label for="pais">País</label>
+            <input
+              type="text"
+              id="pais"
+              name="pais"
+              autocomplete="country-name"
+              required
+              minlength="2"
+              placeholder="Escribe o elige de la lista"
+              list="lista-paises"
+            />
+            <datalist id="lista-paises">
+              <option value="México"></option>
+              <option value="España"></option>
+              <option value="Argentina"></option>
+              <option value="Colombia"></option>
+              <option value="Perú"></option>
+              <option value="Chile"></option>
+              <option value="Ecuador"></option>
+              <option value="Guatemala"></option>
+              <option value="Estados Unidos"></option>
+            </datalist>
+          </div>
+
+          <div class="field">
+            <label for="telefono">Número de teléfono</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              autocomplete="tel"
+              required
+              pattern="[0-9+\s().-]{8,}"
+              title="Incluye al menos 8 números. Puedes usar prefijo internacional y espacios."
+              placeholder="+52 55 1234 5678"
+            />
+          </div>
+
+          <div class="field">
+            <label for="materia">Materia</label>
+            <input
+              type="text"
+              id="materia"
+              name="materia"
+              required
+              minlength="2"
+              placeholder="Escribe o elige de la lista"
+              list="lista-materias"
+            />
+            <datalist id="lista-materias">
+              <option value="Matemáticas"></option>
+              <option value="Programación"></option>
+              <option value="Bases de datos"></option>
+              <option value="Redes y sistemas"></option>
+              <option value="Inglés"></option>
+            </datalist>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn-primary">Enviar registro académico</button>
+          </div>
+        </form>
+
+        <p class="footer-note">
+          ¿Ya tienes cuenta?
+          <a href="#" class="link">Iniciar sesión</a>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

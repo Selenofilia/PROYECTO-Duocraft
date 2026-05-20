@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ficha de explorador — LinguaQuest</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="site-identity">
+          <div class="site-mark" aria-hidden="true"></div>
+          <div>
+            <span class="site-name">LinguaQuest</span>
+            <span class="site-tagline">Ficha de explorador</span>
+          </div>
+        </div>
+        <nav class="nav-pills" aria-label="Prototipo">
+          <a href="index.html">Inicio</a>
+          <a href="registro.html" aria-current="page">Ficha</a>
+          <a href="mapa.html">Atlas</a>
+          <a href="equipo.html">Círculo</a>
+        </nav>
+      </header>
+
+      <main class="card card--accent-top">
+        <div class="card-header">
+          <p class="eyebrow">Alta en la ruta</p>
+          <h1>Quién eres en el atlas</h1>
+          <p class="subtitle">
+            Datos académicos, idioma de destino, círculo del curso y vocación lingüística. Diseñado para
+            estudiantes universitarios (18–25 años).
+          </p>
+        </div>
+
+        <form class="form" method="get" action="mapa.html">
+          <fieldset class="form">
+            <legend class="eyebrow">Identidad</legend>
+
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="given-name" required minlength="2" placeholder="Ej. Ana" />
+            </div>
+
+            <div class="field">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" name="apellidos" autocomplete="family-name" required minlength="2" placeholder="Ej. García López" />
+            </div>
+
+            <div class="field field-narrow">
+              <label for="edad">Edad</label>
+              <input type="number" id="edad" name="edad" min="17" max="99" required inputmode="numeric" placeholder="22" />
+            </div>
+
+            <div class="field">
+              <label for="correo">Correo</label>
+              <input type="email" id="correo" name="correo" autocomplete="email" required placeholder="nombre@universidad.edu" />
+            </div>
+
+            <div class="field">
+              <label for="ruta">Código de ruta</label>
+              <input type="text" id="ruta" name="ruta" required placeholder="Ej. ING-A2-2026" list="lista-rutas" />
+              <datalist id="lista-rutas">
+                <option value="ING-A2-2026"></option>
+                <option value="FRA-B1-2026"></option>
+                <option value="ALE-A1-2026"></option>
+              </datalist>
+            </div>
+          </fieldset>
+
+          <fieldset class="form">
+            <legend class="eyebrow">Tu lugar en el mapa</legend>
+
+            <div class="field">
+              <label for="idioma">Idioma de destino</label>
+              <select id="idioma" name="idioma" required>
+                <option value="">Selecciona</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+                <option value="de">Alemán</option>
+                <option value="it">Italiano</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="circulo">Círculo de estudio</label>
+              <select id="circulo" name="circulo" required>
+                <option value="">Selecciona tu círculo</option>
+                <option value="c1">Círculo Coral — Voceros</option>
+                <option value="c2">Círculo Índigo — Cartógrafos</option>
+                <option value="c3">Círculo Ámbar — Sintetistas</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <span id="vocacion-label">Vocación lingüística</span>
+              <div class="vocation-grid" role="radiogroup" aria-labelledby="vocacion-label">
+                <div class="vocation-option">
+                  <input type="radio" id="archivista" name="vocacion" value="archivista" required />
+                  <label for="archivista">
+                    <strong>Archivista</strong>
+                    <span>Escritura y hábito constante</span>
+                  </label>
+                </div>
+                <div class="vocation-option">
+                  <input type="radio" id="vocero" name="vocacion" value="vocero" />
+                  <label for="vocero">
+                    <strong>Vocero</strong>
+                    <span>Voz y encuentros en vivo</span>
+                  </label>
+                </div>
+                <div class="vocation-option">
+                  <input type="radio" id="cartografo" name="vocacion" value="cartografo" />
+                  <label for="cartografo">
+                    <strong>Cartógrafo</strong>
+                    <span>Escucha y vocabulario nuevo</span>
+                  </label>
+                </div>
+                <div class="vocation-option">
+                  <input type="radio" id="sintetista" name="vocacion" value="sintetista" />
+                  <label for="sintetista">
+                    <strong>Sintetista</strong>
+                    <span>Gramática y convergencias escritas</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="actions">
+            <button type="submit" class="btn btn--coral">Abrir mi atlas</button>
+          </div>
+        </form>
+
+        <p class="footer-note">
+          ¿Ya exploras esta ruta?
+          <a href="mapa.html">Ir al atlas</a>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
