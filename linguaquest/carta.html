@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carta del día — LinguaQuest</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page" data-carta>
+      <header class="header">
+        <div class="mark" aria-hidden="true"></div>
+        <div class="header-text">
+          <p class="logo">LinguaQuest</p>
+          <p class="tagline">Carta · Estación Umbral</p>
+        </div>
+      </header>
+
+      <div class="practice-head">
+        <span data-slide-label>Pregunta 1 de 2</span>
+        <span>Chispas 5/5</span>
+      </div>
+
+      <div class="practice-card" data-slide>
+        <p class="eyebrow">Traducción</p>
+        <p class="practice-q">Good morning</p>
+        <button type="button" class="option" data-option data-ok="1" data-msg-ok="Correcto. +15 puntos.">
+          Buenos días
+        </button>
+        <button type="button" class="option" data-option data-msg-bad="Era: Buenos días.">
+          Buenas noches
+        </button>
+        <button type="button" class="option" data-option data-msg-bad="Era: Buenos días.">
+          Buenas tardes
+        </button>
+        <p class="feedback" data-feedback aria-live="polite"></p>
+      </div>
+
+      <div class="practice-card" data-slide hidden>
+        <p class="eyebrow">Gramática</p>
+        <p class="practice-q">My name ___ Ana</p>
+        <button type="button" class="option" data-option data-msg-bad="Era: is.">are</button>
+        <button type="button" class="option" data-option data-ok="1" data-msg-ok="Correcto. +15 puntos.">is</button>
+        <button type="button" class="option" data-option data-msg-bad="Era: is.">am</button>
+        <p class="feedback" data-feedback aria-live="polite"></p>
+      </div>
+
+      <div class="practice-card summary-box" data-slide hidden>
+        <p class="eyebrow">Carta cerrada</p>
+        <h2 style="font-family: var(--font-display); font-weight: 400; margin: 0 0 0.5rem">+50 puntos</h2>
+        <p style="color: var(--muted); font-size: 0.9rem; margin: 0 0 0.75rem">
+          El 30% suma al Círculo Coral.
+        </p>
+        <span class="stat stat--hot">Racha mantenida</span>
+      </div>
+
+      <button type="button" class="btn" data-slide-next hidden style="margin-top: 1rem">Siguiente</button>
+    </div>
+
+    <nav class="bottom-nav" aria-label="Principal">
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="carta.html" aria-current="page">Carta</a></li>
+        <li><a href="equipo.html">Círculo</a></li>
+      </ul>
+    </nav>
+    <script src="js/app.js"></script>
+  </body>
+</html>
