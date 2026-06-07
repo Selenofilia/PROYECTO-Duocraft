@@ -9,7 +9,7 @@ Prototipo web de práctica de idiomas para universidad: microlecciones, mapa del
 3. Selecciona la rama **main** y la carpeta **/docs**.
 4. Guarda. En uno o dos minutos el sitio quedará en:
 
-   **https://selenofilia.github.io/PROYECTO-MAMALON/**
+   **https://selenofilia.github.io/PROYECTO-Duocraft/**
 
 ## Estructura del repositorio
 
